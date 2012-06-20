@@ -1,11 +1,10 @@
-# Path to your oh-my-zsh configuration.
+# Glowny folder oh-my-zsh.
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# Aktualny theme
 ZSH_THEME="prose"
+
+# Ponizej - syf oh-my-zsh
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -24,22 +23,22 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mercurial svn lol extract nyan perl ruby cloudapp)
+plugins=(git mercurial svn lol extract nyan perl ruby cloudapp zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+
+# Podstawowe aliasy.
 
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias maroon="ssh tomek@m.sored.pl"
 alias rust="ssh tomek@r.sored.pl"
 alias sinopia="ssh tomek@s.sored.pl"
-alias ping="PING"
+alias ping="PING" # pieprzony zsh za kazdym razem meczyl o poprawe -_-
 alias vikki="ssh tomek@vikki.yeuxverts.net -p 19788"
 
-export LD_LIBRARY_PATH=/usr/local/lib
-export LIBRARY_PATH=/usr/local/lib
-export CPATH=/usr/local/include
+
+# Aliasy dla Japanese-Tools
 
 JAPANESE_TOOLS=$HOME/Documents/GitHub/Japanese-Tools
 
@@ -52,3 +51,16 @@ alias romaji="$JAPANESE_TOOLS/romaji/romaji.sh"
 alias reading="$JAPANESE_TOOLS/reading/read.py"
 alias kdct="$JAPANESE_TOOLS/kanjidic/kanjidic.sh"
 alias gt="$JAPANESE_TOOLS/google_translate/gt.sh"
+
+
+# Ustawienia podswietlania
+
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+
+
+# Exporty dla cygwina
+
+export LD_LIBRARY_PATH=/usr/local/lib
+export LIBRARY_PATH=/usr/local/lib
+export CPATH=/usr/local/include
+
