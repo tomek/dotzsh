@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Aktualny theme
-ZSH_THEME="prose"
+ZSH_THEME="bira"
 
 # Ponizej - syf oh-my-zsh
 
@@ -23,10 +23,13 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mercurial svn lol extract nyan perl ruby cloudapp zsh-syntax-highlighting)
+plugins=(git mercurial svn lol extract nyan perl ruby cloudapp history-substring-search github)
 
 source $ZSH/oh-my-zsh.sh
+# source mintty-solarized-dark.sh
+# source ~/.hub/hub.zsh_completion
 
+git=$HOME/Documents/GitHub
 
 # Podstawowe aliasy.
 
@@ -36,7 +39,7 @@ alias rust="ssh tomek@r.sored.pl"
 alias sinopia="ssh tomek@s.sored.pl"
 alias ping="PING" # pieprzony zsh za kazdym razem meczyl o poprawe -_-
 alias vikki="ssh tomek@vikki.yeuxverts.net -p 19788"
-
+# alias git="hub" # noep
 
 # Aliasy dla Japanese-Tools
 
@@ -55,7 +58,7 @@ alias gt="$JAPANESE_TOOLS/google_translate/gt.sh"
 
 # Ustawienia podswietlania
 
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+# ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 
 # Exporty dla cygwina
@@ -64,3 +67,4 @@ export LD_LIBRARY_PATH=/usr/local/lib
 export LIBRARY_PATH=/usr/local/lib
 export CPATH=/usr/local/include
 
+eval $( dircolors -b $HOME/LS_COLORS )
