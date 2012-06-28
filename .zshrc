@@ -23,13 +23,15 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mercurial svn lol extract nyan perl ruby cloudapp history-substring-search github)
+plugins=(git mercurial svn lol extract nyan perl ruby gem rvm cloudapp history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
-# source mintty-solarized-dark.sh
-# source ~/.hub/hub.zsh_completion
 
-git=$HOME/Documents/GitHub
+# source $HOME/.hub/hub.zsh_completion
+
+# Skrocik do gita
+
+git=/f/git
 
 # Podstawowe aliasy.
 
@@ -39,7 +41,13 @@ alias rust="ssh tomek@r.sored.pl"
 alias sinopia="ssh tomek@s.sored.pl"
 alias ping="PING" # pieprzony zsh za kazdym razem meczyl o poprawe -_-
 alias vikki="ssh tomek@vikki.yeuxverts.net -p 19788"
-# alias git="hub" # noep
+# alias cp="pycp"
+# alias mv="pymv"
+eval "$(hub alias -s)"
+
+alias cp='rsync --progress -ah'
+alias mv='rsync --progress -ah --remove-sent-files'
+
 
 # Aliasy dla Japanese-Tools
 
@@ -56,15 +64,25 @@ alias kdct="$JAPANESE_TOOLS/kanjidic/kanjidic.sh"
 alias gt="$JAPANESE_TOOLS/google_translate/gt.sh"
 
 
-# Ustawienia podswietlania
-
-# ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-
-
 # Exporty dla cygwina
 
 export LD_LIBRARY_PATH=/usr/local/lib
 export LIBRARY_PATH=/usr/local/lib
 export CPATH=/usr/local/include
 
+
+# Kolorki
+
 eval $( dircolors -b $HOME/LS_COLORS )
+
+
+# Testowanie recznie kompilowanego gita (git/git, msysgit/git)
+
+# PATH=/home/git/bin:$PATH
+# PATH=/home/tomek/wingit/bin:$PATH
+
+
+# Syf do RVM
+
+PATH=$HOME/.rvm/bin:/bind:$PATH
+source $HOME/.rvm/scripts/rvm
