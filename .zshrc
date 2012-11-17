@@ -53,7 +53,7 @@ alias sl='ls -F'
 alias hl='gl'
 alias subl='/f/sublime/sublime_text.exe -w'
 alias st='subl'
-
+alias backupik='rsync -h -e ssh -avz --exclude rtorrent tomek@m.sored.pl:/home/tomek/ /home/maroon --progress'
 
 # Aliasy dla Japanese-Tools
 JAPANESE_TOOLS=$git/Japanese-Tools
@@ -80,8 +80,11 @@ eval $( dircolors -b $HOME/LS_COLORS )
 
 
 #PATH
-PATH=/home/git/bin:$PATH
+PATH=/home/git2/bin:$PATH
 
 
 # Z
 . $git/z/z.sh
+
+# Zsh-completions
+fpath=($git/zsh-completions/src $fpath)
