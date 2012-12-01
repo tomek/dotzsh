@@ -34,9 +34,9 @@ git=/f/git
 
 # Podstawowe aliasy.
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
-alias maroon="ssh tomek@m.sored.pl"
-alias rust="ssh tomek@r.sored.pl"
-alias sinopia="ssh tomek@s.sored.pl"
+#alias maroon="ssh tomek@m.sored.pl"
+#alias rust="ssh tomek@r.sored.pl"
+#alias sinopia="ssh tomek@s.sored.pl"
 alias ping="PING" # pieprzony zsh za kazdym razem meczyl o poprawe -_-
 alias tracert="TRACERT" # jak wyzej, jebany zsh
 alias vikki="ssh tomek@vikki.yeuxverts.net -p 19788"
@@ -49,6 +49,7 @@ alias ls='ls -F --color=tty'
 alias lsa='ls -lahF'
 alias l='ls -laF'
 alias ll='ls -lF'
+alias s='ssh'
 alias sl='ls -F'
 alias hl='gl'
 alias subl='/f/sublime/sublime_text.exe -w'
