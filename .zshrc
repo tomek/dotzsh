@@ -24,9 +24,8 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras git-hubflow cp mercurial svn lol extract nyan perl cloudapp history-substring-search)
+plugins=(git git-extras cp flagio mercurial svn lol extract nyan perl history-substring-search)
 source $ZSH/oh-my-zsh.sh
-
 
 # Skrocik do gita
 git=/f/git
@@ -42,7 +41,7 @@ alias tracert="TRACERT" # jak wyzej, jebany zsh
 alias vikki="ssh tomek@vikki.yeuxverts.net -p 19788"
 alias vpsik="ssh tomek@tomek.nekomimi.pl"
 alias vksik="vpsik"
-eval "$(hub alias -s)"
+#eval "$(hub alias -s)"
 alias gsu="git submodule update"
 alias znajdz="locate -i"
 alias ls='ls -F --color=tty'
@@ -55,6 +54,8 @@ alias hl='gl'
 alias subl='/f/sublime/sublime_text.exe -w'
 alias st='subl'
 alias backupik='rsync -h -e ssh -avz --exclude rtorrent tomek@m.sored.pl:/home/tomek/ /home/maroon --progress'
+#alias wget ='noglob wget'
+#alias curl ='noglob curl'
 
 # Aliasy dla Japanese-Tools
 JAPANESE_TOOLS=$git/Japanese-Tools
@@ -81,11 +82,11 @@ eval $( dircolors -b $HOME/LS_COLORS )
 
 
 #PATH
-PATH=/home/git2/bin:$PATH
+PATH=/home/git2/bin:/usr/local/heroku/bin:$PATH
 
 
 # Z
-. $git/z/z.sh
+# . $git/z/z.sh
 
 # Zsh-completions
 fpath=($git/zsh-completions/src $fpath)
