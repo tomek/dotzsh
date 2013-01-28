@@ -1,10 +1,8 @@
 # Glowny folder oh-my-zsh.
 ZSH=$HOME/.oh-my-zsh
 
-
 # Aktualny theme
 ZSH_THEME="tomkowy"
-
 
 # Ponizej - syf oh-my-zsh
 # Set to this to use case-sensitive completion
@@ -30,17 +28,10 @@ source $ZSH/oh-my-zsh.sh
 # Skrocik do gita
 git=/f/git
 
-
 # Podstawowe aliasy.
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
-#alias maroon="ssh tomek@m.sored.pl"
-#alias rust="ssh tomek@r.sored.pl"
-#alias sinopia="ssh tomek@s.sored.pl"
 alias ping="PING" # pieprzony zsh za kazdym razem meczyl o poprawe -_-
 alias tracert="TRACERT" # jak wyzej, jebany zsh
-alias vikki="ssh tomek@vikki.yeuxverts.net -p 19788"
-alias vpsik="ssh tomek@tomek.nekomimi.pl"
-alias vksik="vpsik"
 #eval "$(hub alias -s)"
 alias gsu="git submodule update"
 alias znajdz="locate -i"
@@ -53,9 +44,7 @@ alias sl='ls -F'
 alias hl='gl'
 alias subl='/f/sublime/sublime_text.exe -w'
 alias st='subl'
-alias backupik='rsync -h -e ssh -avz --exclude rtorrent tomek@m.sored.pl:/home/tomek/ /home/maroon --progress'
-#alias wget ='noglob wget'
-#alias curl ='noglob curl'
+alias backupik='rsync -h -e ssh -avz --exclude rtorrent tomek@nekomimi.pl:/home/tomek/ /home/nekomimi --progress'
 
 # Aliasy dla Japanese-Tools
 JAPANESE_TOOLS=$git/Japanese-Tools
@@ -70,20 +59,16 @@ alias reading="$JAPANESE_TOOLS/reading/read.py"
 alias kdct="$JAPANESE_TOOLS/kanjidic/kanjidic.sh"
 alias gt="$JAPANESE_TOOLS/google_translate/gt.sh"
 
-
 # Exporty dla cygwina
 # export LD_LIBRARY_PATH=/usr/local/lib
 # export LIBRARY_PATH=/usr/local/lib
 # export CPATH=/usr/local/include
 
-
 # Kolorki
 eval $( dircolors -b $HOME/LS_COLORS )
 
-
 #PATH
 PATH=/home/git2/bin:/usr/local/heroku/bin:$PATH
-
 
 # Z
 # . $git/z/z.sh
