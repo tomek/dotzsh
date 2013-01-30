@@ -1,5 +1,5 @@
 # Glowny folder oh-my-zsh.
-zsh=$HOME/.oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 
 # Aktualny theme
 ZSH_THEME="tomkowy"
@@ -10,7 +10,7 @@ DISABLE_AUTO_UPDATE="true"
 
 plugins=(git git-extras cp flagio mercurial svn lol extract nyan perl history-substring-search)
 
-source $zsh/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # Skrocik do gita
 git=/f/git
@@ -21,7 +21,6 @@ alias ping="PING" # pieprzony zsh za kazdym razem meczyl o poprawe -_-
 alias tracert="TRACERT" # jak wyzej, jebany zsh
 #eval "$(hub alias -s)"
 alias gsu="git submodule update"
-compdef _git gsu=git submodule update
 alias znajdz="locate -i"
 alias ls='ls -F --color=tty'
 alias lsa='ls -lahF'
