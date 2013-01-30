@@ -1,29 +1,16 @@
 # Glowny folder oh-my-zsh.
-ZSH=$HOME/.oh-my-zsh
+zsh=$HOME/.oh-my-zsh
 
 # Aktualny theme
 ZSH_THEME="tomkowy"
 
 # Ponizej - syf oh-my-zsh
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
 
-# Comment this out to disable weekly auto-update checks
 DISABLE_AUTO_UPDATE="true"
 
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git git-extras cp flagio mercurial svn lol extract nyan perl history-substring-search)
-source $ZSH/oh-my-zsh.sh
+
+source $zsh/oh-my-zsh.sh
 
 # Skrocik do gita
 git=/f/git
@@ -34,6 +21,7 @@ alias ping="PING" # pieprzony zsh za kazdym razem meczyl o poprawe -_-
 alias tracert="TRACERT" # jak wyzej, jebany zsh
 #eval "$(hub alias -s)"
 alias gsu="git submodule update"
+compdef _git gsu=git submodule update
 alias znajdz="locate -i"
 alias ls='ls -F --color=tty'
 alias lsa='ls -lahF'
@@ -45,19 +33,20 @@ alias hl='gl'
 alias subl='/f/sublime/sublime_text.exe -w'
 alias st='subl'
 alias backupik='rsync -h -e ssh -avz --exclude rtorrent tomek@nekomimi.pl:/home/tomek/ /home/nekomimi --progress'
+alias wget='noglob wget'
 
 # Aliasy dla Japanese-Tools
-JAPANESE_TOOLS=$git/Japanese-Tools
-alias ja="$JAPANESE_TOOLS/jmdict/jm.sh"
-alias wa="$JAPANESE_TOOLS/jmdict/wa.sh"
-alias rtk="$JAPANESE_TOOLS/rtk/rtk.sh"
-alias sen="$JAPANESE_TOOLS/yahoo_jisho/daijisen.sh"
-alias rin="$JAPANESE_TOOLS/yahoo_jisho/daijirin.sh"
-alias gd="$JAPANESE_TOOLS/google_dictionary/gd.sh"
-alias romaji="$JAPANESE_TOOLS/romaji/romaji.sh"
-alias reading="$JAPANESE_TOOLS/reading/read.py"
-alias kdct="$JAPANESE_TOOLS/kanjidic/kanjidic.sh"
-alias gt="$JAPANESE_TOOLS/google_translate/gt.sh"
+jt=$git/Japanese-Tools
+alias ja="$jt/jmdict/jm.sh"
+alias wa="$jt/jmdict/wa.sh"
+alias rtk="$jt/rtk/rtk.sh"
+alias sen="$jt/yahoo_jisho/daijisen.sh"
+alias rin="$jt/yahoo_jisho/daijirin.sh"
+alias gd="$jt/google_dictionary/gd.sh"
+alias romaji="$jt/romaji/romaji.sh"
+alias reading="$jt/reading/read.py"
+alias kdct="$jt/kanjidic/kanjidic.sh"
+alias gt="$jt/google_translate/gt.sh"
 
 # Exporty dla cygwina
 # export LD_LIBRARY_PATH=/usr/local/lib
@@ -67,11 +56,8 @@ alias gt="$JAPANESE_TOOLS/google_translate/gt.sh"
 # Kolorki
 eval $( dircolors -b $HOME/LS_COLORS )
 
-#PATH
+# PATH
 PATH=/home/git2/bin:/usr/local/heroku/bin:$PATH
 
-# Z
-# . $git/z/z.sh
-
-# Zsh-completions
+# zsh-completions
 fpath=($git/zsh-completions/src $fpath)
