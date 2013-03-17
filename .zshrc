@@ -8,7 +8,7 @@ ZSH_THEME="tomkowy"
 
 DISABLE_AUTO_UPDATE="true"
 
-plugins=(git git-extras cp flagio mercurial svn lol extract nyan perl history-substring-search)
+plugins=(git git-extras cp mercurial svn lol extract nyan history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -31,7 +31,7 @@ alias sl='ls -F'
 alias hl='gl'
 alias subl='/f/sublime/sublime_text.exe -w'
 alias st='subl'
-alias backupik='rsync -h -e ssh -avz --exclude rtorrent tomek@nekomimi.pl:/home/tomek/ /home/nekomimi --progress'
+alias backupik='rsync -h -e ssh -avz --exclude rtorrent --exclude public_html tomek@nekomimi.pl:/home/tomek/ /home/nekomimi --progress'
 alias wget='noglob wget'
 
 # Aliasy dla Japanese-Tools
@@ -56,7 +56,10 @@ alias gt="$jt/google_translate/gt.sh"
 eval $( dircolors -b $HOME/LS_COLORS )
 
 # PATH
-PATH=/home/git2/bin:/usr/local/heroku/bin:$PATH
+PATH=/usr/local/heroku/bin:$PATH
 
 # zsh-completions
-fpath=($git/zsh-completions/src $fpath)
+fpath=(/f/git/zsh-completions/src $fpath)
+
+# Podswietlenia
+# ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
