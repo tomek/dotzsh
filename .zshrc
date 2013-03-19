@@ -1,16 +1,16 @@
-# Glowny folder oh-my-zsh.
-ZSH=$HOME/.oh-my-zsh
+# Antigen
 
-# Aktualny theme
-ZSH_THEME="tomkowy"
-
-# Ponizej - syf oh-my-zsh
-
-DISABLE_AUTO_UPDATE="true"
-
-plugins=(git git-extras cp mercurial svn lol extract nyan history-substring-search)
-
-source $ZSH/oh-my-zsh.sh
+ANTIGEN_DEFAULT_REPO_URL=https://github.com/Eustachy/oh-my-zsh
+source /f/git/antigen/antigen.zsh
+antigen-lib
+antigen-bundle Eustachy/oh-my-zsh plugins/git
+antigen-bundle Eustachy/oh-my-zsh plugins/git-extras
+antigen-bundle Eustachy/oh-my-zsh plugins/lol
+antigen-bundle Eustachy/oh-my-zsh plugins/extract
+antigen-bundle Eustachy/oh-my-zsh plugins/nyan
+antigen-bundle Eustachy/oh-my-zsh plugins/history-substring-search
+antigen-theme Eustachy/oh-my-zsh themes/tomkowy
+antigen-apply
 
 # Skrocik do gita
 git=/f/git
@@ -19,7 +19,6 @@ git=/f/git
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias ping="PING" # pieprzony zsh za kazdym razem meczyl o poprawe -_-
 alias tracert="TRACERT" # jak wyzej, jebany zsh
-#eval "$(hub alias -s)"
 alias gsu="git submodule update"
 alias znajdz="locate -i"
 alias ls='ls -F --color=tty'
@@ -47,19 +46,8 @@ alias reading="$jt/reading/read.py"
 alias kdct="$jt/kanjidic/kanjidic.sh"
 alias gt="$jt/google_translate/gt.sh"
 
-# Exporty dla cygwina
-# export LD_LIBRARY_PATH=/usr/local/lib
-# export LIBRARY_PATH=/usr/local/lib
-# export CPATH=/usr/local/include
-
 # Kolorki
 eval $( dircolors -b $HOME/LS_COLORS )
 
-# PATH
-PATH=/usr/local/heroku/bin:$PATH
-
 # zsh-completions
 fpath=(/f/git/zsh-completions/src $fpath)
-
-# Podswietlenia
-# ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
