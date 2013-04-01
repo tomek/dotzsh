@@ -7,7 +7,7 @@ source /f/git/antigen/antigen.zsh
 
 # Glowny lib omz
 
-antigen-lib
+antigen-use oh-my-zsh
 
 # Pluginy
 
