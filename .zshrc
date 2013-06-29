@@ -1,6 +1,7 @@
 #-------------------------------------------------------------------------------
 # Antigen
 #-------------------------------------------------------------------------------
+PATH=$PATH
 
 ANTIGEN_DEFAULT_REPO_URL=https://github.com/Eustachy/oh-my-zsh
 source /f/git/antigen/antigen.zsh
@@ -17,6 +18,8 @@ antigen-bundle Eustachy/oh-my-zsh plugins/lol
 antigen-bundle Eustachy/oh-my-zsh plugins/extract
 antigen-bundle Eustachy/oh-my-zsh plugins/nyan
 antigen-bundle Eustachy/oh-my-zsh plugins/history-substring-search
+antigen-bundle Eustachy/oh-my-zsh plugins/z
+antigen-bundle Eustachy/oh-my-zsh plugins/repo
 antigen-bundle zsh-users/zsh-completions
 
 # Moj theme
@@ -44,8 +47,9 @@ setopt hist_reduce_blanks
 # Rozne
 #-------------------------------------------------------------------------------
 
-# Skrocik do gita
+# Skrociki
 git=/f/git
+mozb=/c/mozilla-build
 
 # Aliasy
 source ~/.zsh/aliasiki.zsh
