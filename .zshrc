@@ -1,7 +1,7 @@
 #-------------------------------------------------------------------------------
 # Antigen
 #-------------------------------------------------------------------------------
-PATH=$PATH
+PATH=/home/tomek/git/bin:$PATH
 
 ANTIGEN_DEFAULT_REPO_URL=https://github.com/Eustachy/oh-my-zsh
 source /f/git/antigen/antigen.zsh
