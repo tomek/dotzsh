@@ -13,7 +13,8 @@ alias sl='ls -F'
 alias hl='gl'
 alias subl='/f/sublime/sublime_text.exe -w'
 alias st='subl'
-alias backupik='rsync -h -e ssh -avz --exclude rtorrent --exclude public_html tomek@nekomimi.pl:/home/tomek/ /home/nekomimi --progress'
+alias backupik='rsync -h -e ssh -avz --exclude rtorrent --exclude public_html --exclude .jdownloader --exclude .mozilla tomek@nekomimi.pl:/home/tomek/ /home/nekomimi 
+--progress'
 alias wget='noglob wget'
 
 # Aliasy dla Japanese-Tools

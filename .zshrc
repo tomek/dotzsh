@@ -12,15 +12,34 @@ antigen-use oh-my-zsh
 
 # Pluginy
 
-antigen-bundle Eustachy/oh-my-zsh plugins/git
-antigen-bundle Eustachy/oh-my-zsh plugins/git-extras
-antigen-bundle Eustachy/oh-my-zsh plugins/lol
-antigen-bundle Eustachy/oh-my-zsh plugins/extract
-antigen-bundle Eustachy/oh-my-zsh plugins/nyan
-antigen-bundle Eustachy/oh-my-zsh plugins/history-substring-search
-antigen-bundle Eustachy/oh-my-zsh plugins/z
-antigen-bundle Eustachy/oh-my-zsh plugins/repo
-antigen-bundle zsh-users/zsh-completions
+antigen-bundles <<EOBUNDLES
+
+git
+git-extras
+lol
+extract
+nyan
+history-substring-search
+z
+repo
+jump
+git-flow-avh
+zsh-users/zsh-completions
+Tarrasch/zsh-bd
+
+#antigen-bundle Eustachy/oh-my-zsh plugins/git
+#antigen-bundle Eustachy/oh-my-zsh plugins/git-extras
+#antigen-bundle Eustachy/oh-my-zsh plugins/lol
+#antigen-bundle Eustachy/oh-my-zsh plugins/extract
+#antigen-bundle Eustachy/oh-my-zsh plugins/nyan
+#antigen-bundle Eustachy/oh-my-zsh plugins/history-substring-search
+#antigen-bundle Eustachy/oh-my-zsh plugins/z
+#antigen-bundle Eustachy/oh-my-zsh plugins/repo
+#antigen-bundle Eustachy/oh-my-zsh plugins/jump
+#antigen-bundle zsh-users/zsh-completions
+#antigen-bundle Eustachy/oh-my-zsh plugins/git-flow-avh
+
+EOBUNDLES
 
 # Moj theme
 antigen-theme Eustachy/oh-my-zsh themes/tomkowy
