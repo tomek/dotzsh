@@ -2,6 +2,7 @@
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias ping="PING" # pieprzony zsh za kazdym razem meczyl o poprawe -_-
 alias tracert="TRACERT" # jak wyzej, jebany zsh
+compdef _git gsu="git submodule update"
 alias gsu="git submodule update"
 alias znajdz="locate -i"
 alias ls='ls -F --color=tty'

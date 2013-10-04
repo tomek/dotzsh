@@ -14,35 +14,29 @@ antigen-use oh-my-zsh
 
 antigen-bundles <<EOBUNDLES
 
+# git related stuff
 git
 git-extras
-lol
-extract
-nyan
-history-substring-search
-z
-repo
-jump
 git-flow-avh
-zsh-users/zsh-completions
-Tarrasch/zsh-bd
+gitignore
 
-#antigen-bundle Eustachy/oh-my-zsh plugins/git
-#antigen-bundle Eustachy/oh-my-zsh plugins/git-extras
-#antigen-bundle Eustachy/oh-my-zsh plugins/lol
-#antigen-bundle Eustachy/oh-my-zsh plugins/extract
-#antigen-bundle Eustachy/oh-my-zsh plugins/nyan
-#antigen-bundle Eustachy/oh-my-zsh plugins/history-substring-search
-#antigen-bundle Eustachy/oh-my-zsh plugins/z
-#antigen-bundle Eustachy/oh-my-zsh plugins/repo
-#antigen-bundle Eustachy/oh-my-zsh plugins/jump
-#antigen-bundle zsh-users/zsh-completions
-#antigen-bundle Eustachy/oh-my-zsh plugins/git-flow-avh
+# lazy mode on
+extract
+
+# history search
+history-substring-search
+
+# random
+z
+jump
+
+# a must have completions
+zsh-users/zsh-completions
 
 EOBUNDLES
 
 # Moj theme
-antigen-theme Eustachy/oh-my-zsh themes/tomkowy
+antigen-theme tomkowy
 
 # Odpal Antigena
 
@@ -52,7 +46,7 @@ antigen-apply
 # Czas na czary ZSH
 #-------------------------------------------------------------------------------
 
-autoload -U compinit; compinit;     
+autoload -U compinit; compinit -i;     
 autoload -U promptinit; promptinit;
 
 setopt notify
@@ -68,7 +62,7 @@ setopt hist_reduce_blanks
 
 # Skrociki
 git=/f/git
-mozb=/c/mozilla-build
+mozb=/f/mozilla-build
 
 # Aliasy
 source ~/.zsh/aliasiki.zsh
