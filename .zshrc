@@ -17,8 +17,8 @@ antigen-bundles <<EOBUNDLES
 # git related stuff
 git
 git-extras
-git-flow-avh
-gitignore
+# git-flow-avh
+# gitignore
 
 # lazy mode on
 extract
@@ -27,8 +27,8 @@ extract
 history-substring-search
 
 # random
-z
-jump
+# z
+# jump
 
 # a must have completions
 zsh-users/zsh-completions
