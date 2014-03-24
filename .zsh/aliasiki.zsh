@@ -2,7 +2,7 @@
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias ping="PING" # pieprzony zsh za kazdym razem meczyl o poprawe -_-
 alias tracert="TRACERT" # jak wyzej, jebany zsh
-compdef _git gsu="git submodule update"
+compdef _git gsu="git submodule"
 alias gsu="git submodule update"
 alias znajdz="locate -i"
 alias ls='ls -F --color=tty'
@@ -12,8 +12,8 @@ alias ll='ls -lF'
 alias s='ssh'
 alias sl='ls -F'
 alias hl='gl'
-alias subl='/f/sublime/sublime_text.exe -w'
-alias st='subl'
+#alias subl='/f/sublime/sublime_text.exe -w'
+#alias st='subl'
 alias backupik='rsync -h -e ssh -avz --exclude rtorrent --exclude public_html --exclude .jdownloader --exclude .mozilla tomek@nekomimi.pl:/home/tomek/ /home/nekomimi 
 --progress'
 alias wget='noglob wget'

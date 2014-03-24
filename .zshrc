@@ -2,6 +2,7 @@
 # Antigen
 #-------------------------------------------------------------------------------
 PATH=/home/tomek/git/bin:$PATH
+fpath=(~/.zsh $fpath)
 
 ANTIGEN_DEFAULT_REPO_URL=https://github.com/Eustachy/oh-my-zsh
 source /f/git/antigen/antigen.zsh
@@ -48,6 +49,7 @@ antigen-apply
 
 autoload -U compinit; compinit -i;     
 autoload -U promptinit; promptinit;
+autoload -U zmv
 
 setopt notify
 setopt inc_append_history
@@ -55,6 +57,16 @@ setopt share_history
 setopt hist_expire_dups_first
 setopt hist_ignore_all_dups
 setopt hist_reduce_blanks
+
+zmodload zsh/terminfo
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
+autoload -U url-quote-magic
+zle -N self-insert url-quote-magic
+
+autoload -Uz git-escape-magic
+git-escape-magic
 
 #-------------------------------------------------------------------------------
 # Rozne
@@ -68,4 +80,4 @@ mozb=/f/mozilla-build
 source ~/.zsh/aliasiki.zsh
 
 # Kolorki
-eval $( dircolors -b $HOME/LS_COLORS )
+eval $( dircolors -b $git/LS_COLORS/LS_COLORS )
