@@ -4,7 +4,7 @@
 PATH=/home/tomek/git/bin:$PATH
 fpath=(~/.zsh $fpath)
 
-ANTIGEN_DEFAULT_REPO_URL=https://github.com/Eustachy/oh-my-zsh
+ANTIGEN_DEFAULT_REPO_URL=https://github.com/tomek/oh-my-zsh
 source /f/git/antigen/antigen.zsh
 
 # Glowny lib omz
@@ -18,8 +18,6 @@ antigen-bundles <<EOBUNDLES
 # git related stuff
 git
 git-extras
-# git-flow-avh
-# gitignore
 
 # lazy mode on
 extract
@@ -27,14 +25,17 @@ extract
 # history search
 history-substring-search
 
-# random
-# z
-# jump
-
 # a must have completions
 zsh-users/zsh-completions
 
 EOBUNDLES
+
+# Ot taki bonus
+antigen bundle rupa/z
+add-zsh-hook precmd _z_precmd
+function _z_precmd {
+    _z --add "$PWD"
+}
 
 # Moj theme
 antigen-theme tomkowy
@@ -57,6 +58,9 @@ setopt share_history
 setopt hist_expire_dups_first
 setopt hist_ignore_all_dups
 setopt hist_reduce_blanks
+
+HISTSIZE=10000
+SAVEHIST=8500
 
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
