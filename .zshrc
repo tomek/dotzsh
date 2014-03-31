@@ -38,7 +38,7 @@ function _z_precmd {
 }
 
 # Moj theme
-antigen-theme tomkowy
+antigen-theme ~/.zsh/tomkowy.zsh-theme
 
 # Odpal Antigena
 
