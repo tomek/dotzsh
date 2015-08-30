@@ -28,17 +28,13 @@ history-substring-search
 # a must have completions
 zsh-users/zsh-completions
 
+#systemadmin
+
 EOBUNDLES
 
-# Ot taki bonus
-antigen bundle rupa/z
-add-zsh-hook precmd _z_precmd
-function _z_precmd {
-    _z --add "$PWD"
-}
-
 # Moj theme
-antigen-theme ~/.zsh/tomkowy.zsh-theme
+# antigen-theme ~/.zsh/theme/tomkowy.zsh-theme
+antigen-theme ~/.zsh/theme --loc=tomkowy --no-local-clone
 
 # Odpal Antigena
 
@@ -79,6 +75,7 @@ git-escape-magic
 # Skrociki
 git=/f/git
 mozb=/f/mozilla-build
+gtk=/f/gtk-build
 
 # Aliasy
 source ~/.zsh/aliasiki.zsh
