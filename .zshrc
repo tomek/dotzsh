@@ -1,7 +1,7 @@
 #-------------------------------------------------------------------------------
 # Antigen
 #-------------------------------------------------------------------------------
-PATH=/home/tomek/git/bin:$PATH
+PATH=/home/tomek/git/bin:$PATH:/usr/libexec/busybox/sbin:/f/git/gg/bin
 fpath=(~/.zsh $fpath)
 
 ANTIGEN_DEFAULT_REPO_URL=https://github.com/tomek/oh-my-zsh
@@ -17,7 +17,7 @@ antigen-bundles <<EOBUNDLES
 
 # git related stuff
 git
-git-extras
+# git-extras
 
 # lazy mode on
 extract
@@ -28,7 +28,7 @@ history-substring-search
 # a must have completions
 zsh-users/zsh-completions
 
-#systemadmin
+psprint/zsh-navigation-tools
 
 EOBUNDLES
 
